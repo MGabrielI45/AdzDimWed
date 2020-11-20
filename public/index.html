@@ -9,73 +9,117 @@
 <body>
 
     <div class="opening">
-        <h1>Adzkia & <br> Dimas</h1>
-        <h2>28/12/2020</h2>
+        <p>Bismillahirrahmanirrahim</p>
+        <h1>Adzkia<br>Dimas</h1>
+        <h2>28 December 2020</h2>
+        <div class="counter">
+            <div class="counts"><span id="days">12</span><p>Days</p></div>
+            <div class="counts"><span id="hours">12</span><p>Hours</p></div>
+            <div class="counts"><span id="minutes">12</span><p>Minutes</p></div>
+        </div>
+        <p>Open Invitation</p>
         <img src="source/img/FlowerBorder.png">
     </div>
 
     <div class="content">
-        <img src="source/img/wedding-rings.svg" alt="wedding ring">
+        <br>
+        <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder">
 
-        <p>Adzkia Husnul Abidat <br> <span>Putri dari Bapak Widodo winaskita dan Ibu Dian Yasmina Fajri</span></p>
+        <div class="name">
+            
+            <p>Adzkia Husnul Abidat <br> <span>Daughter of Mr. Widodo Winaskita & Mrs. Dian Yasmina Fajri</span></p>
+            <br>
+            <img src="source/img/wedding-rings.svg" alt="wedding ring">
+            <br><br>
+            <p>Dimas Yoga Pratama J. <br> <span>Son of Jubaedi Suryadiningrat and Mrs. Lamirah</span></p>
+            
+        </div>
+        <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder2">
         <br>
-        <br>
-        <h3>&</h3>
-        <br>
-        <br>
-        <p>Dimas Yoga Pratama Jubaedi <br> <span>Putra dari Bapak Jubaedi Suryadiningrat dan Ibu Lamirah</span></p>
+    </div>
+
+    <div class="dateTime">
         <br>
         
-        <div class="akad">
-            <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder">
+
+        <div class="location">
             <h2>Akad Nikah</h2>
-            <p>I have no idea what is in this</p>
-            <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder2">
+            <br><br>
+            <br>
+
+            <p><img src="source/img/calendar.svg" alt="Calendar">  Monday, 28 December 2020</p> 
+            <p><img src="source/img/clock.svg" alt="Clock">   09.30-11.30</p> 
+            <p><img src="source/img/wedding-location.svg" alt="Location"> Tsamara Resto, Bekasi</p> 
+
         </div>
+        <br>
+        <div class="links">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Instagran Live @adzkia</a>
+            <a href="https://www.youtube.com/watch?v=qMQ-y9dHE2k" target="_blank">Instagran Live @dim.be</a>
+            <a href="https://www.youtube.com/watch?v=B0Td48JLgow" target="_blank"><img src="source/img/zoom.svg" alt="Zoom"> <br> <br>(click here to join zoom)</a>
+        </div>
+
+        <br>
     </div>
 
     <div class="notes">
-        <h2>Notes</h2>
-        <h3>To our beloved Friends</h3>
-        <p>idk whats in here</p>
-        <img src="source/img/FlowerBorder3.png" alt="flower border">
+        <img src="source/img/FlowerBorder.png" alt="flower">
+        <br><br>
+        <br><br>
+        <h2>Notes to Our Dearest Friends</h2><br>
+        <p>Tanpa mengurangi rasa hormat dikarenakan situasi dan kondisi 
+            pandemi, kami hanya mengundang keluarga terdekat. <br><br>
 
-        <div class="links">
-            <button class="igAdz"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="source/img/igtvCircle.svg" alt="igtv"></a></button>
-            <button class="zoom"><a href="https://www.youtube.com/watch?v=B0Td48JLgow" target="_blank"><img src="source/img/zoomCircle.svg" alt="zoom"></a></button>
-            <button class="igDim"><a href="https://www.youtube.com/watch?v=qMQ-y9dHE2k" target="_blank"><img src="source/img/igtvCircle.svg" alt="igtv"></a></button>
-            <span>IGTV Adzkia</span> <span>Live Zoom</span> <span>IGTV Dimas</span>
-        </div>
+            Merupakan suatu kebahagiaan bagi kami, sekiranya teman-teman 
+            berkenan mendoakan agar Allah SWT anugerahkan kemudahan 
+            dan kelancaran prosesi akad, juga teranugerahi  keberkahan
+            dalam rumah tangga kami kelak. </p>
+        
+        <br><br>
+        <br><br>
+        <img src="source/img/FlowerBorder.png" alt="flower">
+    </div>
+
+    <div class="vid">
+        <br>
+        <h2>Our Story</h2><br>
+        <video controls>
+            <source src="source/vid.mp4" type="video/mp4">
+        </video>
+        <br><br>
     </div>
 
     <div class="comSection">
-        <h2>Comments & Wishes</h2>
+        <br>
+        <h2>Guest Book</h2>
 
-        <div class="comments" id="ComSect">
-
-            <p><span>name</span><br>
-                msg
-            </p>_____________ <br><br>
-            
-
-        </div>
+        
         
         <div class="form" id="form">
-            <label for="Name">Name<br>
+            <label for="Name">Name<br><br>
                 <input type="text" name="Name" id="Name" onchange="validateForm()">
             </label><br>
             <br>
-            <label for="Msg">Comment<br>
+            <label for="Msg">Comment<br><br>
                 <textarea name="Msg" id="Msg" cols="30" rows="10" onchange="validateForm()"></textarea>
             </label>
 
             <span id="FailMsg">X Something went wrong </span>
             <button id="submit" disabled onclick="comments()">Submit</button>
         </div>
+
+        <br>
+        <br>
+        <br>
+        <div class="comments" id="ComSect">
+            
+
+        </div>
+        <br>
+        <br>
     </div>
 
-    <br>
-    <br>
+    
     <script src="js/js.js"></script>
 </body>
 </html>
