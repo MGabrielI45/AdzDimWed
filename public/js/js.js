@@ -112,8 +112,35 @@ async function queryComment(){
     }
 }
 
-queryComment()
 
 //! Comment~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+//? Open Invitation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+var body = document.getElementsByTagName('body')[0]
+var opening = document.getElementById('opening')
+window.history.scrollRestoration = 'manual'
+
+function openInv(){
+
+    body.style.overflow = 'visible'
+    autoScroll()
+    
+
+    queryComment()
+
+}
+
+function autoScroll(){
+    scrollBy(0,3)
+    if(scrollY < opening.clientHeight){
+        setTimeout(autoScroll, 10)
+    }else{
+        opening.style.display = "none"
+        scroll(0,0)
+    }
+    
+}
+
+//? Open Invitation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

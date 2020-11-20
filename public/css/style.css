@@ -48,6 +48,7 @@ body {
   font-family: JosefinSans;
   color: #980538;
   background: url("../source/img/bg canvas putih.jpeg");
+  overflow: hidden;
 }
 body .opening {
   position: relative;
