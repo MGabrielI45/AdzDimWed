@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Aurelig;
+  src: url("../source/Font/aurelig/Aurelig Clean OTF.otf");
+}
+@font-face {
+  font-family: Lato;
+  src: url("../source/Font/lato/Lato-Black.ttf");
+}
+@font-face {
+  font-family: Cremona;
+  src: url("../source/Font/cremona/Cremona Regular OTF.otf");
+}
+@keyframes windy {
+  from {
+    transform: skewX(0) skewY(0) translate(-50%, -50%);
+  }
+  to {
+    transform: skewX(1deg) skewY(-1deg) translate(-50%, -50%);
+  }
+}
+@keyframes windy2 {
+  from {
+    transform: skewX(0) skewY(0) rotate(90deg);
+  }
+  to {
+    transform: skewX(2deg) skewY(-2deg) rotate(90deg);
+  }
+}
+@keyframes windy3 {
+  from {
+    transform: skewX(0) skewY(0) rotate(-90deg);
+  }
+  to {
+    transform: skewX(2deg) skewY(-2deg) rotate(-90deg);
+  }
+}
+@keyframes windy4 {
+  from {
+    transform: skewX(0) skewY(0) translate(-50%, 0);
+  }
+  to {
+    transform: skewX(1deg) skewY(-1deg) translate(-50%, 0);
+  }
+}
+body {
+  overflow-x: hidden;
+  font-family: Lato;
+}
+body .opening {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+body .opening img {
+  position: absolute;
+  width: 97vw;
+  height: 97vw;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: windy 3s infinite alternate linear;
+}
+body .opening h1 {
+  position: absolute;
+  font-size: 15vw;
+  top: 40%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Aurelig;
+}
+body .opening h2 {
+  position: absolute;
+  font-size: 7vw;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+body .content {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+body .content img {
+  width: 13vw;
+  height: 13vw;
+  margin: 5vw 0 5vw 50%;
+  transform: translate(-50%, 0);
+}
+body .content p {
+  text-align: center;
+  font-size: 5vw;
+  line-height: 3vw;
+}
+body .content span {
+  font-size: 2.5vw;
+  line-height: 3vw;
+  text-align: center;
+}
+body .content h3 {
+  text-align: center;
+  font-size: 8vw;
+}
+body .content .akad {
+  width: 100%;
+  position: relative;
+  margin: 20vw 0 20vw;
+  height: auto;
+}
+body .content .akad h2 {
+  text-align: center;
+  font-size: 6vw;
+  margin-bottom: 5vw;
+}
+body .content .akad p {
+  font-size: 3vw;
+  text-align: center;
+}
+body .content .akad .flowerBorder {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  margin: 0;
+  top: -100%;
+  left: 5%;
+  transform: rotate(90deg);
+  animation: windy2 2s infinite alternate linear;
+}
+body .content .akad .flowerBorder2 {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  margin: 0;
+  bottom: -100%;
+  right: 5%;
+  transform: rotate(-90deg);
+  animation: windy3 2s infinite alternate linear;
+}
+body .notes {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+body .notes h2 {
+  text-align: center;
+  font-size: 7vw;
+  margin-bottom: 2vw;
+}
+body .notes h3 {
+  font-size: 3.5vw;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+body .notes p {
+  font-size: 3vw;
+  text-align: center;
+}
+body .notes img {
+  width: 45vw;
+  height: 15vw;
+  margin: 10vw 0 5vw 50%;
+  transform: translate(-50%, 0);
+  animation: windy4 3s infinite alternate linear;
+}
+body .notes .links {
+  width: 80%;
+  margin: 0 auto;
+}
+body .notes .links button {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  margin: 0 5vw;
+}
+body .notes .links button img {
+  position: static;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: 50%;
+  animation: none;
+}
+body .notes .links span {
+  font-size: 3vw;
+  margin: 0 4.5vw;
+}
+body .notes .links span:nth-of-type(3) {
+  margin: 0 6vw;
+}
+body .comSection {
+  width: 100%;
+}
+body .comSection h2 {
+  text-align: center;
+  font-size: 7vw;
+  margin: 5vw 0;
+}
+body .comSection .comments {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+body .comSection .comments p {
+  font-size: 5vw;
+  text-align: left;
+  color: #575757;
+  word-wrap: break-word;
+}
+body .comSection .comments p span {
+  font-size: 4vw;
+  color: #8b8b8b;
+}
+body .comSection .form {
+  width: 80%;
+  margin: 5vw auto;
+}
+body .comSection .form label {
+  width: 100%;
+  font-size: 5vw;
+}
+body .comSection .form label input {
+  width: 100%;
+  height: 8vw;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+body .comSection .form label textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+body .comSection .form span {
+  text-align: center;
+  font-size: 3vw;
+  margin: 4vw auto 0;
+  display: block;
+  color: red;
+  opacity: 0;
+}
+body .comSection .form button {
+  width: 80%;
+  margin: 1vw auto 5vw;
+  outline: none;
+  border: none;
+  background-color: #074a96;
+  color: white;
+  font-weight: bold;
+  font-size: 7vw;
+  padding: 2vw;
+  border-radius: 15px;
+  display: block;
+}
+
+@media only screen and (min-width: 800px) {
+  body .opening img {
+    width: 40vw;
+    height: 40vw;
+    top: 40%;
+    animation: windy 4s infinite alternate linear;
+  }
+  body .opening h1 {
+    font-size: 5.5vw;
+  }
+  body .opening h2 {
+    font-size: 2vw;
+    bottom: 10%;
+  }
+  body .content img {
+    width: 7vw;
+    height: 7vw;
+  }
+  body .content p {
+    font-size: 3.5vw;
+    line-height: 2vw;
+  }
+  body .content span {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
+  body .content h3 {
+    font-size: 5vw;
+  }
+  body .content .akad h2 {
+    font-size: 5vw;
+  }
+  body .content .akad p {
+    font-size: 2vw;
+  }
+  body .notes h2 {
+    font-size: 5vw;
+  }
+  body .notes h3 {
+    font-size: 2.5vw;
+  }
+  body .notes p {
+    font-size: 2vw;
+  }
+  body .notes .links button {
+    width: 7vw;
+    height: 7vw;
+    margin: 0 9vw;
+    transform: none;
+  }
+  body .notes .links button a {
+    width: 0;
+    height: 0;
+  }
+  body .notes .links button a img {
+    transform: none;
+  }
+  body .notes .links span {
+    font-size: 2vw;
+    margin: 0 7vw;
+  }
+  body .notes .links span:nth-of-type(3) {
+    margin: 0 9vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

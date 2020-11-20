@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adzkia & Dimas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="opening">
+        <h1>Adzkia & <br> Dimas</h1>
+        <h2>28/12/2020</h2>
+        <img src="source/img/FlowerBorder.png">
+    </div>
+
+    <div class="content">
+        <img src="source/img/wedding-rings.svg" alt="wedding ring">
+
+        <p>Adzkia Husnul Abidat <br> <span>Putri dari Bapak Widodo winaskita dan Ibu Dian Yasmina Fajri</span></p>
+        <br>
+        <br>
+        <h3>&</h3>
+        <br>
+        <br>
+        <p>Dimas Yoga Pratama Jubaedi <br> <span>Putra dari Bapak Jubaedi Suryadiningrat dan Ibu Lamirah</span></p>
+        <br>
+        
+        <div class="akad">
+            <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder">
+            <h2>Akad Nikah</h2>
+            <p>I have no idea what is in this</p>
+            <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder2">
+        </div>
+    </div>
+
+    <div class="notes">
+        <h2>Notes</h2>
+        <h3>To our beloved Friends</h3>
+        <p>idk whats in here</p>
+        <img src="source/img/FlowerBorder3.png" alt="flower border">
+
+        <div class="links">
+            <button class="igAdz"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="source/img/igtvCircle.svg" alt="igtv"></a></button>
+            <button class="zoom"><a href="https://www.youtube.com/watch?v=B0Td48JLgow" target="_blank"><img src="source/img/zoomCircle.svg" alt="zoom"></a></button>
+            <button class="igDim"><a href="https://www.youtube.com/watch?v=qMQ-y9dHE2k" target="_blank"><img src="source/img/igtvCircle.svg" alt="igtv"></a></button>
+            <span>IGTV Adzkia</span> <span>Live Zoom</span> <span>IGTV Dimas</span>
+        </div>
+    </div>
+
+    <div class="comSection">
+        <h2>Comments & Wishes</h2>
+
+        <div class="comments" id="ComSect">
+
+            <p><span>name</span><br>
+                msg
+            </p>_____________ <br><br>
+            
+
+        </div>
+        
+        <div class="form" id="form">
+            <label for="Name">Name<br>
+                <input type="text" name="Name" id="Name" onchange="validateForm()">
+            </label><br>
+            <br>
+            <label for="Msg">Comment<br>
+                <textarea name="Msg" id="Msg" cols="30" rows="10" onchange="validateForm()"></textarea>
+            </label>
+
+            <span id="FailMsg">X Something went wrong </span>
+            <button id="submit" disabled onclick="comments()">Submit</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <script src="js/js.js"></script>
+</body>
+</html>
