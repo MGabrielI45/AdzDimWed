@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+.space2 {
+  display: none;
+}
+
 @font-face {
   font-family: parisienne;
   src: url("../source/Font/parisienne/parisienne-regular.ttf");
 }
 @font-face {
   font-family: JosefinSans;
-  src: url("../source/Font/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf");
+  src: url("../source/Font/Josefin_Sans/static/JosefinSans-Light.ttf");
 }
 @keyframes windy {
   from {
@@ -49,6 +53,7 @@ body {
   color: #980538;
   background: url("../source/img/bg canvas putih.jpeg");
   overflow: hidden;
+  font-weight: 100;
 }
 body .opening {
   position: relative;
@@ -72,9 +77,9 @@ body .opening .counter .counts {
 }
 body .opening .counter .counts span {
   display: block;
-  width: 6vh;
+  width: 100%;
   height: 8vh;
-  font-size: 4vh;
+  font-size: 3vh;
   background-color: white;
   border-radius: 5px;
   line-height: 8vh;
@@ -83,18 +88,19 @@ body .opening .counter .counts span {
 body .opening .counter .counts p {
   display: inline;
   position: static;
-  font-size: 4vw;
+  font-size: 2vh;
 }
 body .opening p {
   position: absolute;
   top: 3%;
-  font-size: 5vw;
+  font-size: 2vh;
   left: 50%;
   font-style: italic;
   transform: translate(-50%, -50%);
 }
 body .opening p:nth-of-type(2) {
   top: 85%;
+  cursor: pointer;
 }
 body .opening p:nth-of-type(2)::after {
   content: "";
@@ -110,8 +116,8 @@ body .opening p:nth-of-type(2)::after {
 }
 body .opening img {
   position: absolute;
-  width: 50vw;
-  height: 50vw;
+  width: 30vh;
+  height: 30vh;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -119,8 +125,8 @@ body .opening img {
 }
 body .opening h1 {
   position: absolute;
-  font-size: 18vw;
-  line-height: 17vw;
+  font-size: 10vh;
+  line-height: 10vh;
   top: 20%;
   left: 50%;
   width: 70%;
@@ -132,7 +138,7 @@ body .opening h1 {
 body .opening h2 {
   position: absolute;
   width: 80%;
-  font-size: 5vw;
+  font-size: 3vh;
   font-weight: lighter;
   bottom: 36%;
   left: 50%;
@@ -151,37 +157,33 @@ body .content .name {
   transform: translate(0, -50%);
 }
 body .content .name img {
-  width: 7vw;
-  height: 7vw;
+  width: 7vh;
+  height: 7vh;
   margin: 0 0 0 50%;
   transform: translate(-50%, 0);
 }
 body .content .name p {
   text-align: center;
-  font-size: 8vw;
+  font-size: 5vh;
   font-family: parisienne;
-  font-weight: 450;
+  font-weight: normal;
   width: 90%;
   margin: 0 auto;
   line-height: 10vw;
 }
 body .content .name span {
-  font-size: 5vw;
-  line-height: 1vw;
+  font-size: 3vh;
+  line-height: 1vh;
   text-align: center;
   font-family: JosefinSans;
   font-weight: lighter;
   width: 90%;
   margin: 0 auto;
 }
-body .content .name h3 {
-  text-align: center;
-  font-size: 8vw;
-}
 body .content .flowerBorder {
   position: absolute;
-  width: 50vw;
-  height: 50vw;
+  width: 30vh;
+  height: 30vh;
   margin: 0;
   bottom: -5%;
   left: -5%;
@@ -192,8 +194,8 @@ body .content .flowerBorder {
 body .content .flowerBorder2 {
   transform-origin: center;
   position: absolute;
-  width: 50vw;
-  height: 50vw;
+  width: 30vh;
+  height: 30vh;
   margin: 0;
   top: -5%;
   right: -5%;
@@ -203,50 +205,62 @@ body .content .flowerBorder2 {
 body .dateTime {
   width: 100%;
   height: 100vh;
+  position: relative;
   background-color: #ffeee5;
 }
-body .dateTime .location {
-  width: 80%;
-  margin: 5vh auto;
-}
 body .dateTime .location h2 {
-  font-size: 10vw;
+  font-size: 7vh;
   text-align: center;
   font-family: parisienne;
   font-weight: lighter;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  transform: translate(0, -50%);
 }
-body .dateTime .location p {
-  font-size: 4vw;
-  margin: 5vw 0 5vw 5vw;
+body .dateTime .location .locate {
+  width: 80%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .dateTime .location .locate p {
+  font-size: 3vh;
+  margin: 5vh 0;
   display: flex;
   align-items: center;
 }
-body .dateTime .location p img {
-  width: 8vw;
-  height: 8vw;
+body .dateTime .location .locate p img {
+  width: 5vh;
+  height: 5vh;
   display: inline;
   fill: #980538;
   margin-right: 3vw;
 }
 body .dateTime .links {
+  position: absolute;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
+  top: 50%;
 }
 body .dateTime .links a {
   width: 60%;
-  padding: 5vw 5vw;
+  padding: 3vh 3vh;
   text-decoration: none;
   color: inherit;
   background: white;
   border-radius: 5px;
   text-align: center;
-  margin: 3vw auto;
+  margin: 2vh auto;
+  font-size: 3vh;
 }
 body .dateTime .links a:nth-of-type(3) {
   padding: 0;
+  font-size: 2vh;
   background-color: #ffeee5;
 }
 body .dateTime .links a:nth-of-type(3) img {
@@ -256,27 +270,39 @@ body .notes {
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 body .notes h2 {
   text-align: center;
-  font-size: 8vw;
-  margin-bottom: 2vw;
+  font-size: 5vh;
   font-family: parisienne;
   font-weight: 450;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
 }
 body .notes p {
   text-align: center;
   width: 80%;
-  margin: 0 auto;
-  font-size: 5vw;
-  font-weight: 100;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  font-size: 3vh;
+  transform: translate(-50%, -50%);
 }
 body .notes img {
-  width: 20vw;
-  height: 20vw;
-  margin: 10vw 0 5vw 50%;
-  transform: translate(-50%, 0);
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation: windy4 3s infinite alternate linear;
+}
+body .notes img:nth-of-type(2) {
+  top: 85%;
 }
 body .vid {
   width: 100%;
@@ -284,7 +310,7 @@ body .vid {
 }
 body .vid h2 {
   font-family: parisienne;
-  font-size: 9vw;
+  font-size: 6vh;
   font-weight: 100;
   text-align: center;
   color: white;
@@ -301,10 +327,16 @@ body .comSection {
 }
 body .comSection h2 {
   text-align: center;
-  font-size: 8vw;
-  margin-bottom: 5vw;
+  font-size: 5vh;
+  margin-bottom: 5vh;
   font-family: parisienne;
   font-weight: lighter;
+}
+body .comSection img {
+  width: 10vh;
+  height: 10vh;
+  margin: 0 auto;
+  display: block;
 }
 body .comSection .comments {
   width: 80%;
@@ -312,18 +344,20 @@ body .comSection .comments {
   text-align: center;
 }
 body .comSection .comments p {
-  font-size: 5vw;
+  font-size: 3vh;
   text-align: left;
-  color: #980538;
+  color: black;
   word-wrap: break-word;
+  font-weight: 100;
 }
 body .comSection .comments p span {
-  font-size: 4vw;
+  font-size: 4vh;
   color: #980538;
+  font-weight: bold;
 }
 body .comSection .form {
   width: 80%;
-  margin: 5vw auto;
+  margin: 3vh auto;
 }
 body .comSection .form label {
   width: 100%;
@@ -331,7 +365,7 @@ body .comSection .form label {
 }
 body .comSection .form label input {
   width: 100%;
-  height: 8vw;
+  height: 4vh;
   outline: none;
   border-radius: 8px;
   border: none;
@@ -353,6 +387,7 @@ body .comSection .form span {
   opacity: 0;
 }
 body .comSection .form button {
+  cursor: pointer;
   width: 50%;
   margin: 1vw auto 5vw;
   outline: none;
@@ -360,78 +395,119 @@ body .comSection .form button {
   background-color: transparent;
   font-size: 4vw;
   padding: 2vw;
-  border-radius: 5px;
+  border-radius: 10px;
   display: block;
   color: #980538;
   border: 1px solid #980538;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 800px) {
   body {
-    overflow-x: hidden;
+    overflow: hidden;
+  }
+  body .opening p {
+    font-size: 3vh;
   }
   body .opening img {
-    width: 40vw;
-    height: 40vw;
-    top: 40%;
-    animation: windy 4s infinite alternate linear;
+    width: 30vh;
+    height: 30vh;
   }
   body .opening h1 {
-    font-size: 5.5vw;
+    font-size: 12vh;
+    line-height: 12vh;
   }
-  body .opening h2 {
-    font-size: 2vw;
-    bottom: 10%;
+  body .opening .counter p {
+    font-size: 3vh !important;
+  }
+  body .opening .counter span {
+    font-size: 5vh !important;
   }
   body .content img {
-    width: 7vw;
-    height: 7vw;
+    width: 10vw !important;
+    height: 10vw !important;
   }
   body .content p {
-    font-size: 3.5vw;
-    line-height: 2vw;
+    font-size: 4vw !important;
+    line-height: 3vw !important;
   }
   body .content span {
-    font-size: 1.5vw;
-    line-height: 1.5vw;
+    font-size: 2vw !important;
+    line-height: 2vw !important;
   }
-  body .content h3 {
+  body .content .flowerBorder, body .content .flowerBorder2 {
+    width: 28vw !important;
+    height: 28vw !important;
+  }
+  body .dateTime .space {
+    display: none;
+  }
+  body .dateTime .location .locate {
+    width: unset;
+  }
+  body .dateTime .location .space {
+    display: none;
+  }
+  body .dateTime .location h2 {
     font-size: 5vw;
   }
-  body .content .akad h2 {
+  body .dateTime .location p {
     font-size: 5vw;
   }
-  body .content .akad p {
-    font-size: 2vw;
+  body .dateTime .location p img {
+    width: 4vw;
+    height: 4vw;
+    margin-right: 1vw;
+  }
+  body .dateTime .links a {
+    width: 30%;
+    padding: 2vw 3vw;
+    margin: 0.5vw auto;
+    border-radius: 10px;
+  }
+  body .notes img {
+    width: 5vw;
+    height: 5vw;
   }
   body .notes h2 {
     font-size: 5vw;
   }
-  body .notes h3 {
-    font-size: 2.5vw;
-  }
   body .notes p {
     font-size: 2vw;
   }
-  body .notes .links button {
-    width: 7vw;
-    height: 7vw;
-    margin: 0 9vw;
-    transform: none;
+  body .vid h2 {
+    font-size: 5vw;
   }
-  body .notes .links button a {
-    width: 0;
-    height: 0;
+  body .vid video {
+    width: 60%;
   }
-  body .notes .links button a img {
-    transform: none;
+  body .comSection h2 {
+    font-size: 5vw;
   }
-  body .notes .links span {
+  body .comSection img {
+    width: 10vw;
+    height: 10vw;
+  }
+  body .comSection .form {
+    width: 40%;
+  }
+  body .comSection .form label {
     font-size: 2vw;
-    margin: 0 7vw;
   }
-  body .notes .links span:nth-of-type(3) {
-    margin: 0 9vw;
+  body .comSection .form label input {
+    height: 3vw;
+  }
+  body .comSection .form span {
+    font-size: 1.5vw;
+  }
+  body .comSection .form button {
+    padding: 1vw 3vw;
+    font-size: 2vw;
+  }
+  body .comSection .comments p {
+    font-size: 2vw;
+  }
+  body .comSection .comments p span {
+    font-size: 2vw;
   }
 }
 

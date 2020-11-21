@@ -83,7 +83,6 @@ async function queryComment(){
                 let br = document.createElement('br')
                 let span = document.createElement('span')
                 let text1 = document.createTextNode(data.msg)
-                let text2 = document.createTextNode('_____________')
 
                 span.innerHTML = data.name
 
@@ -92,7 +91,7 @@ async function queryComment(){
                 para.appendChild(text1)
 
                 commentsect.appendChild(para)
-                commentsect.appendChild(text2)
+                commentsect.appendChild(br.cloneNode())
                 commentsect.appendChild(br.cloneNode())
                 commentsect.appendChild(br.cloneNode())
 
@@ -144,3 +143,40 @@ function autoScroll(){
 
 //? Open Invitation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+//* Counter~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+var day = document.getElementById('days')
+var hour = document.getElementById('hours')
+var minute = document.getElementById('minutes')
+var Counter = document.getElementById('counter')
+const weddDate = new Date(2020,11,28,9).getTime()
+
+var x = setInterval(counter,1000)
+
+function counter(){
+    let now = new Date().getTime()
+    let distance = weddDate - now
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24))
+    let hours = Math.floor(distance % (1000 * 60 * 60 * 24) / ( 1000 * 60 * 60 ))
+    let minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+
+    day.innerHTML = days 
+    hour.innerHTML = hours 
+    minute.innerHTML = minutes 
+
+    if (distance <= 0){
+        let text = document.createTextNode('the wedding has started')
+        clearInterval(x)
+        while(Counter.firstChild){
+            Counter.removeChild(Counter.lastChild)
+        }
+        Counter.appendChild(text)
+        console.log("it stopped");
+    }
+
+}
+
+
+
+//* Counter~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
