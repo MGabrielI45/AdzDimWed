@@ -8,8 +8,14 @@
     <title>Adzkia & Dimas</title>
     <link rel="icon" href="source/img/wedding-rings.svg" type="image/svg+xml" sizes="any">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    
+    <button class="audio" onclick="toogleAudio()"> <i class="fa fa-volume-up" aria-hidden="true" id="VolOn"></i> <i id="VolOff" class="fa fa-volume-off" aria-hidden="true"></i></button>
+    <audio loop id="audio">
+        <source src="source/perfect.mp3" type="audio/mpeg">
+    </audio>
 
     <div class="opening" id="opening">
         <p>Bismillahirrahmanirrahim</p>
@@ -20,7 +26,7 @@
             <div class="counts"><span id="hours"></span><p>Hours</p></div>
             <div class="counts"><span id="minutes"></span><p>Minutes</p></div>
         </div>
-        <p onclick="openInv()">Open Invitation</p>
+        <p onclick="openInv(); toogleAudio()">Open Invitation</p>
         <img src="source/img/FlowerBorder.png">
     </div>
 

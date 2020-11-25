@@ -180,3 +180,25 @@ function counter(){
 
 
 //* Counter~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//! audio
+
+var volumeOn = document.getElementById('VolOn')
+var volumeOff = document.getElementById('VolOff')
+var audio = document.getElementById('audio')
+var audio_on = false
+
+function toogleAudio(){
+    if(audio_on){
+        audio.pause()
+        volumeOn.style.display = "none"
+        volumeOff.style.display = "block"
+    }else{
+        audio.play()
+        volumeOn.style.display = "block"
+        volumeOff.style.display = "none"
+    }
+    audio_on = !audio_on
+}
+
+//! audio

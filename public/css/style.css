@@ -55,6 +55,30 @@ body {
   overflow: hidden;
   font-weight: 100;
 }
+body .audio {
+  position: fixed;
+  left: 5%;
+  bottom: 15px;
+  width: 8%;
+  height: 8vw;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.9;
+  cursor: pointer;
+  z-index: 5;
+}
+body .audio:hover {
+  filter: brightness(120%);
+}
+body .audio .fa {
+  display: none;
+  font-size: 6vw;
+  color: #a7a7a7;
+}
+body .audio .fa-volume-off {
+  display: block;
+}
 body .opening {
   position: relative;
   height: 100vh;
@@ -401,6 +425,13 @@ body .comSection .form button {
 @media only screen and (min-width: 800px) {
   body {
     overflow: hidden;
+  }
+  body .audio {
+    width: 3.5%;
+    height: 3.5vw;
+  }
+  body .audio .fa {
+    font-size: 2.5vw;
   }
   body .opening p {
     font-size: 3vh;

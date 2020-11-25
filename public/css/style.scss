@@ -63,6 +63,36 @@ body{
     overflow: hidden;
     font-weight: 100;
 
+    .audio{
+        position: fixed;
+        left: 5%;
+        bottom: 15px;
+        width: 8%;
+        height: 8vw;
+        outline: none;
+        border-radius: 50%;
+        border: none;
+        opacity: 0.9;
+        cursor: pointer;
+        z-index: 5;
+    
+        &:hover{
+            filter: brightness(120%);
+        }
+    
+        .fa{
+            display: none;
+            font-size: 6vw;
+            color: rgb(167, 167, 167);
+    
+    
+        }
+    
+        .fa-volume-off{
+            display: block;
+        }
+    }
+
     .opening{
         position: relative;
         height: 100vh;
@@ -493,6 +523,15 @@ body{
 
     body{
         overflow: hidden;
+
+        .audio{
+            width: 3.5%;
+            height: 3.5vw;
+
+            .fa{
+                font-size: 2.5vw;
+            }
+        }
 
         .opening{
 
