@@ -549,38 +549,39 @@ body .comSection .form button {
   body .dateTime .space {
     display: none;
   }
-  body .dateTime .location .locate {
-    width: unset;
+  body .dateTime .location {
+    width: 50%;
   }
-  body .dateTime .location .space {
-    display: none;
+  body .dateTime .location .locate p {
+    font-size: 2vw;
+  }
+  body .dateTime .location .locate img {
+    width: 3vw !important;
+    height: 3vw !important;
   }
   body .dateTime .location h2 {
-    font-size: 5vw;
+    font-size: 8vh;
   }
-  body .dateTime .location p {
-    font-size: 5vw;
+  body .dateTime .location img {
+    width: 40vh !important;
+    height: 40vh !important;
   }
-  body .dateTime .location p img {
-    width: 4vw;
-    height: 4vw;
-    margin-right: 1vw;
+  body .dateTime .links p {
+    font-size: 3vh;
   }
   body .dateTime .links a {
     width: 30%;
-    padding: 2vw 3vw;
-    margin: 0.5vw auto;
-    border-radius: 10px;
+    font-size: 3vh;
+    padding: 2vh 1vh;
   }
-  body .notes img {
-    width: 5vw;
-    height: 5vw;
+  body .notes .note h2 {
+    font-size: 10vh;
   }
-  body .notes h2 {
-    font-size: 5vw;
+  body .notes .note p {
+    font-size: 4vh;
   }
   body .notes p {
-    font-size: 2vw;
+    font-size: 3vh;
   }
   body .vid h2 {
     font-size: 5vw;
@@ -591,9 +592,12 @@ body .comSection .form button {
   body .comSection h2 {
     font-size: 5vw;
   }
+  body .comSection P {
+    font-size: 4vh;
+  }
   body .comSection img {
-    width: 10vw;
-    height: 10vw;
+    width: 20vh !important;
+    height: 20vh !important;
   }
   body .comSection .form {
     width: 40%;
