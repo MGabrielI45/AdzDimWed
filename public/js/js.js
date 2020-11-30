@@ -80,14 +80,12 @@ async function queryComment(){
             response.forEach(data => {
 
                 let para = document.createElement('p')
-                let br = document.createElement('br')
                 let span = document.createElement('span')
                 let text1 = document.createTextNode(data.msg)
 
                 span.innerHTML = data.name
 
                 para.appendChild(span)
-                para.appendChild(br)
                 para.appendChild(text1)
 
                 commentsect.appendChild(para)

@@ -512,15 +512,17 @@ body{
                 word-wrap: break-word;
                 font-weight: 100;
                 background-color: white;
-                padding: 2vw;
+                padding: 3vw;
                 border-radius: 10px;
                 margin-bottom: 2vh;
                 position: relative;
 
                 span{
+                    display: block;
                     font-size: 3vh;
                     color: rgb(152, 5, 56);
                     font-weight: bold;
+                    margin-bottom: 1vh;
                 }
 
                 &::before{
