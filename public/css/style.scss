@@ -19,6 +19,11 @@
     src: url('../source/Font/Josefin_Sans/static/JosefinSans-Light.ttf');
 }
 
+@font-face{
+    font-family: JosefinSansBold;
+    src: url('../source/Font/Josefin_Sans/static/JosefinSans-Bold.ttf');
+}
+
 @keyframes windy{
     from{
         transform: skewX(0) skewY(0) translate(-50%,-50%);
@@ -61,6 +66,7 @@ body{
     color: rgb(152, 5, 56);
     background: url('../source/img/bg\ canvas\ putih.jpeg');
     overflow: hidden;
+    overflow-x: hidden;
     font-weight: 100;
 
     .audio{
@@ -99,7 +105,7 @@ body{
         width: 100%;
 
         .counter{
-            width: 50%;
+            width: 70%;
             bottom: 22%;
             left: 50%;
             transform: translate(-50%,0);
@@ -117,11 +123,13 @@ body{
                     display: block;
                     width: 100%;
                     height: 8vh;
-                    font-size: 3vh;
-                    background-color: white;
+                    font-size: 4vh;
+                    background-color: transparent;
                     border-radius: 5px;
                     line-height: 8vh;
                     margin-bottom: 1vh;
+                    font-weight: bolder;
+                    font-family: JosefinSansBold;
                 }
 
                 p{
@@ -143,6 +151,7 @@ body{
             &:nth-of-type(2){
                 top: 85%;
                 cursor: pointer;
+                font-style: normal;
 
                 &::after{
                     content: '';
@@ -161,9 +170,9 @@ body{
 
         img{
             position: absolute;
-            width: 30vh;
-            height: 30vh;
-            top: 45%;
+            width: 28vh;
+            height: 28vh;
+            top: 20%;
             left: 50%;
             transform: translate(-50%,-50%);
             animation: windy 3s infinite alternate linear;
@@ -173,7 +182,7 @@ body{
             position: absolute;
             font-size: 10vh;
             line-height: 10vh;
-            top: 20%;
+            top: 45%;
             left: 50%;
             width: 70%;
             transform: translate(-50%,-50%);
@@ -187,7 +196,7 @@ body{
             position: absolute;
             width: 80%;
             font-size: 3vh;
-            font-weight: lighter;
+            font-weight: 100;
             bottom: 36%;
             left: 50%;
             transform: translate(-50%,-50%);
@@ -215,17 +224,17 @@ body{
     
             p{
                 text-align: center;
-                font-size: 5vh;
+                font-size: 8vw;
                 font-family: parisienne;
                 font-weight: normal;
                 width: 90%;
                 margin: 0 auto;
-                line-height: 10vw;
+                line-height: 8vw;
             }
     
             span{
-                font-size: 3vh;
-                line-height: 1vh;
+                font-size: 4vw;
+                line-height: 0;
                 text-align: center;
                 font-family: JosefinSans;
                 font-weight: lighter;
@@ -269,45 +278,45 @@ body{
         width: 100%;
         height: 100vh;
         position: relative;
+        overflow: hidden;
         background-color: rgb(255, 238, 229);
         
 
         .location{
-            // width: 80%;
-            // position: absolute;
-            // left: 50%;
-            // top: 25%;
-            // transform: translate(-50%,-50%);
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(250, 246, 244);
+            border-radius: 15px;
             
 
             h2{
-                font-size: 7vh;
+                font-size: 8vw;
                 text-align: center;
                 font-family: parisienne;
                 font-weight: lighter;
-                position: absolute;
-                top: 10%;
-                width: 100%;
-                transform: translate(0,-50%);
+                position: static;
+                margin: 2vh 0;
+           
             }
 
             .locate{
                 width: 80%;
-                position: absolute;
-                top: 30%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+                position: static;
+                margin: 0 auto;
 
                 p{
-                    font-size: 3vh;
-                    margin: 5vh 0;
+                    font-size: 4vw;
+                    margin: 1vh 0;
                     display: flex;
                     align-items: center;
                     
     
                     img{
-                        width: 5vh;
-                        height: 5vh;
+                        width: 8vw;
+                        height: 8vw;
                         display: inline;
                         fill: rgb(152, 5, 56);
                         margin-right: 3vw;
@@ -316,7 +325,14 @@ body{
             }
 
 
-            
+            .flower{
+                width: 25vh;
+                height: 25vh;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translate(40%,30%);
+            }
         }
 
         .links{
@@ -329,21 +345,28 @@ body{
             align-items: space-between;
             top: 50%;
 
+            p{
+                font-size: 4vw;
+                text-align: center;
+            }
+
             a{
-                width: 60%;
-                padding: 3vh 3vh;
+                width: 70%;
+                padding: 2vh 3vh;
                 text-decoration: none;
                 color: inherit;
-                background: white;
-                border-radius: 5px;
+                color: white;
+                background-color: rgb(152, 5, 56);
+                border-radius: 10px;
                 text-align: center;
                 margin: 2vh auto;
-                font-size: 3vh;
+                font-size: 5vw;
 
                 &:nth-of-type(3){
                     padding: 0;
                     font-size: 2vh;
                     background-color: rgb(255, 238, 229);
+                    color: rgb(152, 5, 56);
 
                     img{
                         width: 50%;
@@ -367,31 +390,45 @@ body{
             left: 50%;
             width: 80%;
             transform: translate(-50%,-50%);
-        }
 
-        h2{
-            text-align: center;
-            font-size: 5vh;
-            font-family: parisienne;
-            font-weight: 450;
+            h2{
+                position: static;
+                text-align: center;
+                font-size: 5vh;
+                font-family: parisienne;
+                font-weight: 450;
+            }
+    
+            p{
+                position: static;
+                text-align: center;
+                font-size: 2.5vh;
+                transform: none;
+            }
         }
 
         p{
+            position: absolute;
+            font-size: 2.5vh;
+            bottom: 10%;
+            left: 50%;
             text-align: center;
-            font-size: 3vh;
+            transform: translate(-50%,50%);
         }
 
         img{
-            width: 10vh;
-            height: 10vh;
+            width: 25vh;
+            height: 25vh;
             position: absolute;
-            top: 10%;
+            top: 15%;
             left: 50%;
             transform: translate(-50%,-50%);
-            animation: windy4 3s infinite alternate linear;
+            animation: windy 3s infinite alternate linear;
 
             &:nth-of-type(2){
-                top: 85%;
+                top: 80%;
+                height: 10vh;
+                width: 10vh;
             }
         }
 
@@ -422,21 +459,46 @@ body{
     .comSection{
         width: 100%;
         background-color: rgb(255, 233, 221);
+        position: relative;
 
         h2{
             text-align: center;
             font-size: 5vh;
-            margin-bottom: 5vh;
             font-family: parisienne;
             font-weight: lighter;
         }
 
-        img{
-            width: 10vh;
-            height: 10vh;
-            margin: 0 auto;
-            display: block;
+        p{
+            font-size: 2vh;
+            text-align: center;
+            margin-bottom: 5vh;
         }
+
+        .images{
+            width: 100%;
+            height: 20vh;
+            top: 0;
+            left: 0;
+            position: absolute;
+            overflow: hidden;
+
+            img{
+                position: absolute;
+                top: 5%;
+                left: 0%;
+                width: 15vh;
+                height: 15vh;
+                transform: translate(-50%,-32%) rotate(45deg);
+    
+                &:nth-of-type(2){
+                    left: 97%;
+                    transform: translate(-50%,-32%) rotate(-45deg);
+    
+                }
+            }
+        }
+
+        
 
         .comments{
             width: 80%;
@@ -444,16 +506,33 @@ body{
             text-align: center;
             
             p{
-                font-size: 3vh;
+                font-size: 2vh;
                 text-align: left;
                 color: black;
                 word-wrap: break-word;
                 font-weight: 100;
+                background-color: white;
+                padding: 2vw;
+                border-radius: 10px;
+                margin-bottom: 2vh;
+                position: relative;
 
                 span{
-                    font-size: 4vh;
+                    font-size: 3vh;
                     color: rgb(152, 5, 56);
                     font-weight: bold;
+                }
+
+                &::before{
+                    content: '';
+                    background-color: white;
+                    width: 4vw;
+                    transform-origin: center center;
+                    height: 4vw;
+                    top: 50%;
+                    left: -3%;
+                    position: absolute;
+                    transform: rotate(45deg) translate(-50%,-50%);
                 }
             }
         }
@@ -465,22 +544,25 @@ body{
             label{
                 width: 100%;
                 font-size: 5vw;
+                
 
                 input{
                     width: 100%;
-                    height: 30px;
+                    height: 40px;
                     outline: none;
-                    border-radius: 8px;
+                    border-radius: 5px;
                     border: none;
+                    margin-top: 6px;
                 }
 
                 textarea{
                     width: 100%;
-                    height: 50px;
+                    height: 100px;
                     resize: none;
                     outline: none;
-                    border-radius: 8px;
+                    border-radius: 5px;
                     border: none;
+                    margin-top: 6px;
                 }
 
             }
@@ -506,7 +588,7 @@ body{
                 border-radius: 10px;
                 display: block;
                 color: rgb(152, 5, 56);
-                border: 1px solid rgb(152, 5, 56);
+                border: 2px solid rgb(152, 5, 56);
             }
 
         }

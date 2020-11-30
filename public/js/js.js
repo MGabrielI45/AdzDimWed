@@ -91,9 +91,6 @@ async function queryComment(){
                 para.appendChild(text1)
 
                 commentsect.appendChild(para)
-                commentsect.appendChild(br.cloneNode())
-                commentsect.appendChild(br.cloneNode())
-                commentsect.appendChild(br.cloneNode())
 
             });
 
@@ -118,6 +115,7 @@ async function queryComment(){
 
 var body = document.getElementsByTagName('body')[0]
 var opening = document.getElementById('opening')
+var vid = document.getElementById('video')
 window.history.scrollRestoration = 'manual'
 
 function openInv(){
@@ -125,7 +123,7 @@ function openInv(){
     body.style.overflow = 'visible'
     autoScroll()
     
-
+    vid.load()
     queryComment()
 
 }
@@ -133,7 +131,7 @@ function openInv(){
 function autoScroll(){
     scrollBy(0,3)
     if(scrollY < opening.clientHeight){
-        setTimeout(autoScroll, 10)
+        setTimeout(autoScroll, 5)
     }else{
         opening.style.display = "none"
         scroll(0,0)

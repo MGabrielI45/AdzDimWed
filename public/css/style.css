@@ -16,6 +16,10 @@
   font-family: JosefinSans;
   src: url("../source/Font/Josefin_Sans/static/JosefinSans-Light.ttf");
 }
+@font-face {
+  font-family: JosefinSansBold;
+  src: url("../source/Font/Josefin_Sans/static/JosefinSans-Bold.ttf");
+}
 @keyframes windy {
   from {
     transform: skewX(0) skewY(0) translate(-50%, -50%);
@@ -53,6 +57,7 @@ body {
   color: #980538;
   background: url("../source/img/bg canvas putih.jpeg");
   overflow: hidden;
+  overflow-x: hidden;
   font-weight: 100;
 }
 body .audio {
@@ -85,7 +90,7 @@ body .opening {
   width: 100%;
 }
 body .opening .counter {
-  width: 50%;
+  width: 70%;
   bottom: 22%;
   left: 50%;
   transform: translate(-50%, 0);
@@ -103,11 +108,13 @@ body .opening .counter .counts span {
   display: block;
   width: 100%;
   height: 8vh;
-  font-size: 3vh;
-  background-color: white;
+  font-size: 4vh;
+  background-color: transparent;
   border-radius: 5px;
   line-height: 8vh;
   margin-bottom: 1vh;
+  font-weight: bolder;
+  font-family: JosefinSansBold;
 }
 body .opening .counter .counts p {
   display: inline;
@@ -125,6 +132,7 @@ body .opening p {
 body .opening p:nth-of-type(2) {
   top: 85%;
   cursor: pointer;
+  font-style: normal;
 }
 body .opening p:nth-of-type(2)::after {
   content: "";
@@ -140,9 +148,9 @@ body .opening p:nth-of-type(2)::after {
 }
 body .opening img {
   position: absolute;
-  width: 30vh;
-  height: 30vh;
-  top: 45%;
+  width: 28vh;
+  height: 28vh;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: windy 3s infinite alternate linear;
@@ -151,7 +159,7 @@ body .opening h1 {
   position: absolute;
   font-size: 10vh;
   line-height: 10vh;
-  top: 20%;
+  top: 45%;
   left: 50%;
   width: 70%;
   transform: translate(-50%, -50%);
@@ -163,7 +171,7 @@ body .opening h2 {
   position: absolute;
   width: 80%;
   font-size: 3vh;
-  font-weight: lighter;
+  font-weight: 100;
   bottom: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -188,16 +196,16 @@ body .content .name img {
 }
 body .content .name p {
   text-align: center;
-  font-size: 5vh;
+  font-size: 8vw;
   font-family: parisienne;
   font-weight: normal;
   width: 90%;
   margin: 0 auto;
-  line-height: 10vw;
+  line-height: 8vw;
 }
 body .content .name span {
-  font-size: 3vh;
-  line-height: 1vh;
+  font-size: 4vw;
+  line-height: 0;
   text-align: center;
   font-family: JosefinSans;
   font-weight: lighter;
@@ -230,37 +238,51 @@ body .dateTime {
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
   background-color: #ffeee5;
 }
+body .dateTime .location {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  background-color: #faf6f4;
+  border-radius: 15px;
+}
 body .dateTime .location h2 {
-  font-size: 7vh;
+  font-size: 8vw;
   text-align: center;
   font-family: parisienne;
   font-weight: lighter;
-  position: absolute;
-  top: 10%;
-  width: 100%;
-  transform: translate(0, -50%);
+  position: static;
+  margin: 2vh 0;
 }
 body .dateTime .location .locate {
   width: 80%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: static;
+  margin: 0 auto;
 }
 body .dateTime .location .locate p {
-  font-size: 3vh;
-  margin: 5vh 0;
+  font-size: 4vw;
+  margin: 1vh 0;
   display: flex;
   align-items: center;
 }
 body .dateTime .location .locate p img {
-  width: 5vh;
-  height: 5vh;
+  width: 8vw;
+  height: 8vw;
   display: inline;
   fill: #980538;
   margin-right: 3vw;
+}
+body .dateTime .location .flower {
+  width: 25vh;
+  height: 25vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 30%);
 }
 body .dateTime .links {
   position: absolute;
@@ -271,21 +293,27 @@ body .dateTime .links {
   align-items: space-between;
   top: 50%;
 }
+body .dateTime .links p {
+  font-size: 4vw;
+  text-align: center;
+}
 body .dateTime .links a {
-  width: 60%;
-  padding: 3vh 3vh;
+  width: 70%;
+  padding: 2vh 3vh;
   text-decoration: none;
   color: inherit;
-  background: white;
-  border-radius: 5px;
+  color: white;
+  background-color: #980538;
+  border-radius: 10px;
   text-align: center;
   margin: 2vh auto;
-  font-size: 3vh;
+  font-size: 5vw;
 }
 body .dateTime .links a:nth-of-type(3) {
   padding: 0;
   font-size: 2vh;
   background-color: #ffeee5;
+  color: #980538;
 }
 body .dateTime .links a:nth-of-type(3) img {
   width: 50%;
@@ -303,27 +331,40 @@ body .notes .note {
   width: 80%;
   transform: translate(-50%, -50%);
 }
-body .notes h2 {
+body .notes .note h2 {
+  position: static;
   text-align: center;
   font-size: 5vh;
   font-family: parisienne;
   font-weight: 450;
 }
-body .notes p {
+body .notes .note p {
+  position: static;
   text-align: center;
-  font-size: 3vh;
+  font-size: 2.5vh;
+  transform: none;
+}
+body .notes p {
+  position: absolute;
+  font-size: 2.5vh;
+  bottom: 10%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, 50%);
 }
 body .notes img {
-  width: 10vh;
-  height: 10vh;
+  width: 25vh;
+  height: 25vh;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: windy4 3s infinite alternate linear;
+  animation: windy 3s infinite alternate linear;
 }
 body .notes img:nth-of-type(2) {
-  top: 85%;
+  top: 80%;
+  height: 10vh;
+  width: 10vh;
 }
 body .vid {
   width: 100%;
@@ -345,19 +386,38 @@ body .vid video {
 body .comSection {
   width: 100%;
   background-color: #ffe9dd;
+  position: relative;
 }
 body .comSection h2 {
   text-align: center;
   font-size: 5vh;
-  margin-bottom: 5vh;
   font-family: parisienne;
   font-weight: lighter;
 }
-body .comSection img {
-  width: 10vh;
-  height: 10vh;
-  margin: 0 auto;
-  display: block;
+body .comSection p {
+  font-size: 2vh;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+body .comSection .images {
+  width: 100%;
+  height: 20vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+body .comSection .images img {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  width: 15vh;
+  height: 15vh;
+  transform: translate(-50%, -32%) rotate(45deg);
+}
+body .comSection .images img:nth-of-type(2) {
+  left: 97%;
+  transform: translate(-50%, -32%) rotate(-45deg);
 }
 body .comSection .comments {
   width: 80%;
@@ -365,16 +425,32 @@ body .comSection .comments {
   text-align: center;
 }
 body .comSection .comments p {
-  font-size: 3vh;
+  font-size: 2vh;
   text-align: left;
   color: black;
   word-wrap: break-word;
   font-weight: 100;
+  background-color: white;
+  padding: 2vw;
+  border-radius: 10px;
+  margin-bottom: 2vh;
+  position: relative;
 }
 body .comSection .comments p span {
-  font-size: 4vh;
+  font-size: 3vh;
   color: #980538;
   font-weight: bold;
+}
+body .comSection .comments p::before {
+  content: "";
+  background-color: white;
+  width: 4vw;
+  transform-origin: center center;
+  height: 4vw;
+  top: 50%;
+  left: -3%;
+  position: absolute;
+  transform: rotate(45deg) translate(-50%, -50%);
 }
 body .comSection .form {
   width: 80%;
@@ -386,18 +462,20 @@ body .comSection .form label {
 }
 body .comSection .form label input {
   width: 100%;
-  height: 30px;
+  height: 40px;
   outline: none;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
+  margin-top: 6px;
 }
 body .comSection .form label textarea {
   width: 100%;
-  height: 50px;
+  height: 100px;
   resize: none;
   outline: none;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
+  margin-top: 6px;
 }
 body .comSection .form span {
   text-align: center;
@@ -419,7 +497,7 @@ body .comSection .form button {
   border-radius: 10px;
   display: block;
   color: #980538;
-  border: 1px solid #980538;
+  border: 2px solid #980538;
 }
 
 @media only screen and (min-width: 800px) {
