@@ -586,8 +586,9 @@ body .comSection .form button {
   body .vid h2 {
     font-size: 5vw;
   }
-  body .vid video {
+  body .vid iframe {
     width: 60%;
+    height: 35vw;
   }
   body .comSection h2 {
     font-size: 5vw;

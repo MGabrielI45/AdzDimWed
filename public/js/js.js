@@ -113,7 +113,6 @@ async function queryComment(){
 
 var body = document.getElementsByTagName('body')[0]
 var opening = document.getElementById('opening')
-var vid = document.getElementById('video')
 window.history.scrollRestoration = 'manual'
 
 function openInv(){
@@ -121,7 +120,6 @@ function openInv(){
     body.style.overflow = 'visible'
     autoScroll()
     
-    vid.load()
     queryComment()
 
 }
