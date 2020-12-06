@@ -450,7 +450,7 @@ body .comSection .comments p::before {
   transform-origin: center center;
   height: 4vw;
   top: 50%;
-  left: 0%;
+  left: -2%;
   position: absolute;
   transform: rotate(45deg) translate(-50%, -50%);
 }
