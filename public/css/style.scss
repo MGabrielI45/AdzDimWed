@@ -210,6 +210,19 @@ body{
         height: 100vh;
         overflow: hidden;
 
+        .para{
+            text-align: center;
+            font-size: 1.5vh;
+            width: 60%;
+            margin: 0 auto;
+            line-height: 8vw;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%,0);
+            line-height: 2vh;
+        }
+
         .name{
         position: relative;
         top: 50%;
@@ -516,6 +529,7 @@ body{
                 border-radius: 10px;
                 margin-bottom: 2vh;
                 position: relative;
+                z-index: 4;
 
                 span{
                     display: block;
@@ -523,18 +537,6 @@ body{
                     color: rgb(152, 5, 56);
                     font-weight: bold;
                     margin-bottom: 1vh;
-                }
-
-                &::before{
-                    content: '';
-                    background-color: white;
-                    width: 4vw;
-                    transform-origin: center center;
-                    height: 4vw;
-                    top: 50%;
-                    left: 0%;
-                    position: absolute;
-                    transform: rotate(45deg) translate(-50%,-50%);
                 }
             }
         }
@@ -646,8 +648,8 @@ body{
 
         .content{
             img{
-                width: 10vw !important;
-                height: 10vw !important;
+                width: 4vw !important;
+                height: 4vw !important;
             }
             p{
                 font-size: 4vw !important; 
@@ -661,6 +663,11 @@ body{
             .flowerBorder, .flowerBorder2{
                 width: 28vw !important;
                 height: 28vw !important;
+            }
+
+            .para{
+                top: 10%;
+                font-size: 3vh !important;
             }
           
         }

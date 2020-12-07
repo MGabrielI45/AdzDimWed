@@ -20,25 +20,27 @@
     <div class="opening" id="opening">
         <p>Bismillahirrahmanirrahim</p>
         <h1>Adzkia<br>Dimas</h1>
-        <h2>28 December 2020</h2>
+        <h2>28 Desember 2020</h2>
         <div class="counter">
-            <div class="counts"><span id="days"></span><p>Days</p></div>
-            <div class="counts"><span id="hours"></span><p>Hours</p></div>
-            <div class="counts"><span id="minutes"></span><p>Minutes</p></div>
+            <div class="counts"><span id="days"></span><p>Hari</p></div>
+            <div class="counts"><span id="hours"></span><p>Jam</p></div>
+            <div class="counts"><span id="minutes"></span><p>Menit</p></div>
         </div>
-        <p onclick="openInv(); toogleAudio()">Open Invitation</p>
+        <p onclick="openInv(); toogleAudio()">Lihat Undangan</p>
         <img src="source/img/FlowerBorder.png">
     </div>
 
     <div class="content">
         <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder">
 
+        <p class="para">Dengan mengharap ridho-Nya, kami memohon doa restu atas pernikahan kami</p>
+
         <div class="name">
-            <p>Adzkia Husnul Abidat <br> <span>Daughter of Mr. Widodo Winaskita <br> & Mrs. Dian Yasmina Fajri</span></p>
+            <p>Adzkia Husnul Abidat <br> <span>Putri pertama dari Bapak Widodo Winaskita<br> & Ibu Dian Yasmina Fajri</span></p>
             <br>
             <img src="source/img/wedding-rings.svg" alt="wedding ring">
             <br><br>
-            <p>Dimas Yoga Pratama J. <br> <span>Son of Jubaedi Suryadiningrat <br> & Mrs. Lamirah</span></p>
+            <p>Dimas Yoga Pratama J. <br> <span> Putra pertama dari Bapak Jubaedi Suryadiningrat <br> & Ibu Lamirah</span></p>
         </div>
 
         <img src="source/img/FlowerBorder2.png" alt="flower border" class="flowerBorder2">
@@ -50,7 +52,7 @@
             <h2>Akad Nikah</h2>
 
             <div class="locate">
-                <p><img src="source/img/calendar.svg" alt="Calendar">  Monday, 28 December 2020</p> 
+                <p><img src="source/img/calendar.svg" alt="Calendar">  Senin, 28 Desember 2020</p> 
                 <p><img src="source/img/clock.svg" alt="Clock">   09.30-11.30</p> 
                 <p><img src="source/img/wedding-location.svg" alt="Location"> Tsamara Resto, Bekasi</p> 
             </div>
@@ -58,11 +60,11 @@
             <img src="source/img/FlowerBorder5.png" alt="flower" class="flower">
         </div>
         <div class="links">
-            <p>Watch our livestream wedding on</p>
+            <p>Saksikan prosesi akad secara virtual </p>
 
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Instagran Live @adzkia</a>
-            <a href="https://www.youtube.com/watch?v=qMQ-y9dHE2k" target="_blank">Instagran Live @dim.be</a>
-            <a href="https://www.youtube.com/watch?v=B0Td48JLgow" target="_blank"><img src="source/img/zoom.svg" alt="Zoom"><br>(click here to join zoom)</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Instagram Live @adzkia</a>
+            <a href="https://www.youtube.com/watch?v=qMQ-y9dHE2k" target="_blank">Instagram Live @dim.be</a>
+            <a href="https://www.youtube.com/watch?v=B0Td48JLgow" target="_blank"><img src="source/img/youtube-logo-3-3.png" alt="Zoom"><br> <br>(klik untuk menyaksikan livestream)</a>
         </div>
 
     </div>
@@ -71,7 +73,7 @@
         <img src="source/img/FlowerBorder4.png" alt="flower">
     
         <div class="note">
-            <h2>Dear Friends...</h2>
+            <h2>Teruntuk teman-teman…</h2>
             <br><br>
             <p>Tanpa mengurangi rasa hormat kami, mengingat kondisi pandemi yang belum kondusif, kami hanya bisa
                 mengundang keluarga dan kerabat terdekat. <br><br>
@@ -89,7 +91,7 @@
 
     <div class="vid">
         <br>
-        <h2>Galllery</h2><br>
+        <h2>Galeri</h2><br>
         <center>
             <iframe src="https://www.youtube.com/embed/_y0wPniiwWo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </center>
@@ -104,22 +106,22 @@
         
         <br>
         <br>
-        <h2>Wishes</h2>
-        <p>please kindly share you best wishes</p>
+        <h2>Doa & Ucapan</h2>
+        <p>Berikan doa dan ucapan terbaik untuk kedua mempelai</p>
 
         
         
         <div class="form" id="form">
-            <label for="Name">Name<br class="space">
-                <input type="text" name="Name" id="Name" onchange="validateForm()">
+            <label for="Name">Nama<br class="space">
+                <input type="text" name="Name" id="Name" placeholder=" Nama" onchange="validateForm()">
             </label><br>
             <br>
-            <label for="Msg">Comment<br class="space">
-                <textarea name="Msg" id="Msg" cols="30" rows="10" onchange="validateForm()"></textarea>
+            <label for="Msg">Komentar<br class="space">
+                <textarea name="Msg" id="Msg" cols="30" placeholder=" Ucapan dan doa" rows="10" onchange="validateForm()"></textarea>
             </label>
 
-            <span id="FailMsg">X Something went wrong </span>
-            <button id="submit" disabled onclick="comments()">Submit</button>
+            <span id="FailMsg">X Terjadi kesalahan dalam pengiriman </span>
+            <button id="submit" disabled onclick="comments()">Kirim</button>
         </div>
 
         <br>        

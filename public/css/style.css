@@ -183,6 +183,18 @@ body .content {
   height: 100vh;
   overflow: hidden;
 }
+body .content .para {
+  text-align: center;
+  font-size: 1.5vh;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 8vw;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 2vh;
+}
 body .content .name {
   position: relative;
   top: 50%;
@@ -444,18 +456,6 @@ body .comSection .comments p span {
   font-weight: bold;
   margin-bottom: 1vh;
 }
-body .comSection .comments p::before {
-  content: "";
-  background-color: white;
-  width: 4vw;
-  transform-origin: center center;
-  height: 4vw;
-  top: 50%;
-  left: -2%;
-  z-index: -2;
-  position: absolute;
-  transform: rotate(45deg) translate(-50%, -50%);
-}
 body .comSection .form {
   width: 80%;
   margin: 3vh auto;
@@ -533,8 +533,8 @@ body .comSection .form button {
     font-size: 5vh !important;
   }
   body .content img {
-    width: 10vw !important;
-    height: 10vw !important;
+    width: 4vw !important;
+    height: 4vw !important;
   }
   body .content p {
     font-size: 4vw !important;
@@ -547,6 +547,10 @@ body .comSection .form button {
   body .content .flowerBorder, body .content .flowerBorder2 {
     width: 28vw !important;
     height: 28vw !important;
+  }
+  body .content .para {
+    top: 10%;
+    font-size: 3vh !important;
   }
   body .dateTime .space {
     display: none;
