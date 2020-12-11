@@ -517,6 +517,141 @@ body .comSection .form button {
   border: 2px solid #980538;
 }
 
+@media only screen and (min-width: 400px) {
+  body {
+    overflow: hidden;
+  }
+  body .audio {
+    width: 6%;
+    height: 6vw;
+  }
+  body .audio .fa {
+    font-size: 4vw;
+  }
+  body .opening p {
+    font-size: 3vh;
+  }
+  body .opening img {
+    width: 30vh;
+    height: 30vh;
+  }
+  body .opening h1 {
+    font-size: 12vh;
+    line-height: 12vh;
+  }
+  body .opening .counter p {
+    font-size: 3vh !important;
+  }
+  body .opening .counter span {
+    font-size: 5vh !important;
+  }
+  body .content img {
+    width: 5vw !important;
+    height: 5vw !important;
+  }
+  body .content p {
+    font-size: 7vw !important;
+    line-height: 6vw !important;
+  }
+  body .content span {
+    font-size: 4vw !important;
+    line-height: 2vw !important;
+  }
+  body .content .flowerBorder, body .content .flowerBorder2 {
+    width: 28vw !important;
+    height: 28vw !important;
+  }
+  body .content .para {
+    top: 10%;
+    font-size: 3vh !important;
+    line-height: 3vh !important;
+  }
+  body .dateTime .space {
+    display: none;
+  }
+  body .dateTime .location {
+    width: 70%;
+  }
+  body .dateTime .location .locate p {
+    font-size: 4vw;
+  }
+  body .dateTime .location .locate img {
+    width: 3vw !important;
+    height: 3vw !important;
+  }
+  body .dateTime .location h2 {
+    font-size: 8vh;
+  }
+  body .dateTime .location img {
+    width: 25vw !important;
+    height: 25vw !important;
+  }
+  body .dateTime .links p {
+    font-size: 3vh;
+  }
+  body .dateTime .links a {
+    width: 55%;
+    font-size: 3vh;
+    padding: 2vh 1vh;
+  }
+  body .notes .note h2 {
+    font-size: 8vh;
+    line-height: 7vh;
+  }
+  body .notes .note p {
+    font-size: 3vh;
+  }
+  body .notes p {
+    font-size: 3vh;
+  }
+  body .vid h2 {
+    font-size: 8vw;
+  }
+  body .vid iframe {
+    width: 80%;
+    height: 45vw;
+  }
+  body .comSection h2 {
+    font-size: 7vw;
+  }
+  body .comSection .para {
+    font-size: 4vw;
+    line-height: 4vw;
+    width: 70%;
+  }
+  body .comSection .para span {
+    font-size: 3vw;
+  }
+  body .comSection .para span span {
+    font-size: 2.3vw;
+  }
+  body .comSection img {
+    width: 20vh !important;
+    height: 20vh !important;
+  }
+  body .comSection .form {
+    width: 60%;
+  }
+  body .comSection .form label {
+    font-size: 2vw;
+  }
+  body .comSection .form label input {
+    height: 3vw;
+  }
+  body .comSection .form span {
+    font-size: 1.5vw;
+  }
+  body .comSection .form button {
+    padding: 1vw 3vw;
+    font-size: 2vw;
+  }
+  body .comSection .comments p {
+    font-size: 2vw;
+  }
+  body .comSection .comments p span {
+    font-size: 2vw;
+  }
+}
 @media only screen and (min-width: 800px) {
   body {
     overflow: hidden;
