@@ -24,6 +24,11 @@
     src: url('../source/Font/Josefin_Sans/static/JosefinSans-Bold.ttf');
 }
 
+@font-face{
+    font-family: JosefinSansItalic;
+    src: url('../source/Font/Josefin_Sans/static/JosefinSans-LightItalic.ttf');
+}
+
 @keyframes windy{
     from{
         transform: skewX(0) skewY(0) translate(-50%,-50%);
@@ -216,7 +221,7 @@ body{
             width: 60%;
             margin: 0 auto;
             position: absolute;
-            top: 25%;
+            top: 20%;
             left: 50%;
             transform: translate(-50%,0);
             line-height: 2vh;
@@ -480,10 +485,22 @@ body{
             font-weight: lighter;
         }
 
-        p{
+        .para{
             font-size: 2vh;
             text-align: center;
-            margin-bottom: 5vh;
+            width: 60%;
+            margin: 0 auto 5vh;
+            font-family: JosefinSansItalic;
+
+            span{
+                width: 100%;
+                font-size: 2vh;
+
+                span{
+                    font-size: 1.5vh;
+
+                }
+            }
         }
 
         .images{
@@ -753,8 +770,18 @@ body{
                 font-size: 5vw;
             }
 
-            P{
-                font-size: 4vh;
+            .para{
+                font-size: 4vh ;
+                line-height: 4vh ;
+                width: 40%;
+
+                span{
+                    font-size: 3vh ;
+
+                    span{
+                        font-size: 2.5vh;
+                    }
+                }
             }
 
             img{

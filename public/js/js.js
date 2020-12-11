@@ -18,50 +18,61 @@ function validateForm(){
 
 async function comments(){
     submit.setAttribute('disabled', 'disabled');
-
-    let formDatas = new FormData()
-    formDatas.append('name', nameMsg.value)
-    formDatas.append('msg', Msg.value)
-
-    let request = await fetch('/comment',{
-        method: 'POST',
-        body: new URLSearchParams(formDatas)  ,
-        headers:{
-            "Access-Control-Allow-Origin": '*'    
-        },
-    })
-
-    let response = await request.json()
-    if(!request.ok){
-        failMsg.innerHTML = "X Something Went Wrong"
-        failMsg.style.color = "red"
-        
-    }else{
-        failMsg.innerHTML = "✓ Comment Sent"
-        failMsg.style.color = "green"
-        nameMsg.value = ''
-        Msg.value = ''
-    }
-
+    failMsg.innerHTML = "Loading . . ."
+    failMsg.style.color = "grey"
     failMsg.animate([
         {opacity:0},
         {opacity:1}
     ],{
-        duration:500,
+        duration:250,
         fill:"forwards",
     })
 
-    setTimeout(()=>{
+        let formDatas = new FormData()
+        formDatas.append('name', nameMsg.value)
+        formDatas.append('msg', Msg.value)
+    
+        let request = await fetch('/comment',{
+            method: 'POST',
+            body: new URLSearchParams(formDatas)  ,
+            headers:{
+                "Access-Control-Allow-Origin": '*'    
+            },
+        })
+    
+        let response = await request.json()
+        if(!request.ok){
+            failMsg.innerHTML = "X Something Went Wrong"
+            failMsg.style.color = "red"
+            
+        }else{
+            failMsg.innerHTML = "✓ Comment Sent"
+            failMsg.style.color = "green"
+            nameMsg.value = ''
+            Msg.value = ''
+        }
+    
         failMsg.animate([
-            {opacity:1},
-            {opacity:0}
+            {opacity:0},
+            {opacity:1}
         ],{
             duration:500,
             fill:"forwards",
         })
-    },2000)
+    
+        setTimeout(()=>{
+            failMsg.animate([
+                {opacity:1},
+                {opacity:0}
+            ],{
+                duration:500,
+                fill:"forwards",
+            })
+    
+        queryComment()
+    },3000)
 
-    queryComment()
+   
 }
 
 async function queryComment(){

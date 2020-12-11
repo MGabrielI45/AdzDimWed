@@ -20,6 +20,10 @@
   font-family: JosefinSansBold;
   src: url("../source/Font/Josefin_Sans/static/JosefinSans-Bold.ttf");
 }
+@font-face {
+  font-family: JosefinSansItalic;
+  src: url("../source/Font/Josefin_Sans/static/JosefinSans-LightItalic.ttf");
+}
 @keyframes windy {
   from {
     transform: skewX(0) skewY(0) translate(-50%, -50%);
@@ -189,7 +193,7 @@ body .content .para {
   width: 60%;
   margin: 0 auto;
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, 0);
   line-height: 2vh;
@@ -405,10 +409,19 @@ body .comSection h2 {
   font-family: parisienne;
   font-weight: lighter;
 }
-body .comSection p {
+body .comSection .para {
   font-size: 2vh;
   text-align: center;
-  margin-bottom: 5vh;
+  width: 60%;
+  margin: 0 auto 5vh;
+  font-family: JosefinSansItalic;
+}
+body .comSection .para span {
+  width: 100%;
+  font-size: 2vh;
+}
+body .comSection .para span span {
+  font-size: 1.5vh;
 }
 body .comSection .images {
   width: 100%;
@@ -598,8 +611,16 @@ body .comSection .form button {
   body .comSection h2 {
     font-size: 5vw;
   }
-  body .comSection P {
+  body .comSection .para {
     font-size: 4vh;
+    line-height: 4vh;
+    width: 40%;
+  }
+  body .comSection .para span {
+    font-size: 3vh;
+  }
+  body .comSection .para span span {
+    font-size: 2.5vh;
   }
   body .comSection img {
     width: 20vh !important;
