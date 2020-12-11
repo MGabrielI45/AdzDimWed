@@ -421,7 +421,8 @@ body .comSection .para span {
   font-size: 2vh;
 }
 body .comSection .para span span {
-  font-size: 1.5vh;
+  font-size: 1.3vh;
+  font-family: JosefinSansBold;
 }
 body .comSection .images {
   width: 100%;
@@ -620,7 +621,7 @@ body .comSection .form button {
     font-size: 3vh;
   }
   body .comSection .para span span {
-    font-size: 2.5vh;
+    font-size: 2.3vh;
   }
   body .comSection img {
     width: 20vh !important;
