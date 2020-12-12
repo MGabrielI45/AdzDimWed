@@ -200,7 +200,7 @@ body .content .para {
 }
 body .content .name {
   position: relative;
-  top: 50%;
+  top: 58%;
   transform: translate(0, -50%);
 }
 body .content .name img {
@@ -517,6 +517,20 @@ body .comSection .form button {
   border: 2px solid #980538;
 }
 
+@media only screen and (min-width: 400px) and (max-height: 525px) {
+  .content .name p {
+    font-size: 5vw !important;
+    line-height: 4vw !important;
+  }
+  .content .name span {
+    font-size: 2.5vw !important;
+    line-height: 2vw !important;
+  }
+  .content .flowerBorder2 {
+    width: 15vw !important;
+    height: 15vw !important;
+  }
+}
 @media only screen and (min-width: 400px) {
   body {
     overflow: hidden;
