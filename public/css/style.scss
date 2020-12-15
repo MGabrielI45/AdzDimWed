@@ -613,6 +613,20 @@ body{
             }
 
         }
+
+        .loadComm{
+            padding: 2vh 1vw;
+            width: 40%;
+            outline: none;
+            border: none;
+            border-radius: 7px;
+            margin: 5px auto;
+            color: white;
+            font-size: 2vw;
+            background-color: rgb(152, 5, 56);
+            cursor: pointer;
+            display: none;
+        }
     }
 
 }

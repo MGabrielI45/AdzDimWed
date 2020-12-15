@@ -44,14 +44,29 @@ app.post('/comment', (req,res)=>{
     
 })
 
-app.get('/comments',(req,res)=>{
-    scheme.find((err,result)=>{
+app.post('/comments',(req,res)=>{
+    let numCom = parseInt(req.body.numCom) 
+    let numSkip = parseInt(req.body.numSkip) 
+    let count
+    scheme.countDocuments((err,success)=>{
+            if(err){
+                console.log(err)
+                }
+            else{
+                count = success
+                }
+        })
+    scheme.find().limit(numCom).skip(numSkip).exec((err,result)=>{
         if(err){
-            res.json({ msg:"there are no comments yet"})
-        }else{
-            res.send(result)
+            console.log(err);
+            res.json({ msg: 'there are no comments yet'})
+        }
+        else{
+            res.send({data: result, counts: count})
         }
     })
+        
+    
 })
 
 

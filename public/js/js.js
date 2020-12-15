@@ -6,6 +6,8 @@ var Msg = document.getElementById('Msg')
 var submit = document.getElementById('submit')
 var failMsg = document.getElementById('FailMsg')
 var commentsect = document.getElementById('ComSect')
+var loadComm = document.getElementById('loadComm')
+
 
 
 function validateForm(){
@@ -69,26 +71,30 @@ async function comments(){
                 fill:"forwards",
             })
     
-        queryComment()
+        queryComment(0,commentsect.childElementCount)
     },3000)
 
    
 }
 
-async function queryComment(){
+async function queryComment(numCom, numSkip){
+    
+
+    let formDatas = new FormData()
+        formDatas.append('numCom', numCom)
+        formDatas.append('numSkip', numSkip)
+
     let request = await fetch('/comments',{
-        method: 'GET',
+        method: 'POST',
+        body: new URLSearchParams(formDatas)
     })
 
     if(request.ok){
         let response = await request.json()
         
-        while(commentsect.firstChild){
-            commentsect.removeChild(commentsect.lastChild)
-        }
                 
         try{
-            response.forEach(data => {
+            response.data.forEach(data => {
 
                 let para = document.createElement('p')
                 let span = document.createElement('span')
@@ -103,7 +109,7 @@ async function queryComment(){
 
             });
 
-            if(response.length < 1){
+            if(response.data.length < 1){
                 let text3 = document.createTextNode("There are no comments yet")
                 commentsect.appendChild(text3)
             }
@@ -111,6 +117,14 @@ async function queryComment(){
             let text4 = document.createTextNode("There is an error")
             commentsect.appendChild(text4)
         }
+
+        if (commentsect.childElementCount < response.counts){
+            
+            loadComm.style.display = "block"
+        }else{
+            loadComm.style.display = "none"
+        }
+
     }else{
         let text4 = document.createTextNode("There is an error")
         commentsect.appendChild(text4)
@@ -131,7 +145,7 @@ function openInv(){
     body.style.overflow = 'visible'
     autoScroll()
     
-    queryComment()
+    queryComment(10,0)
 
 }
 
